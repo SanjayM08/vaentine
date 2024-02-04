@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Me</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #buttonContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            font-size: 16px;
+            margin: 10px;
+            padding: 10px;
+            transition: all 0.5s ease;
+            font-family:cursive;
+            color: aliceblue;
+        }
+
+        button.yes {
+            transform: scale(1);
+        }
+
+        button.yes.enlarged {
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+
+<div id="buttonContainer">
+    <img class="h-[200px]" id="loveImage" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif">
+    <h1>Will You be My Valentine</h1>
+    <button id="yesButton" class="yes" onclick="changeYes()" style="background-color:#A020F0;">Yes</button>
+    <button id="noButton" onclick="enlargeYes()" style="background-color:#ff0000;">No</button>
+</div>
+
+<script>
+    function changeYes() {
+        document.getElementById("yesButton").textContent = "Yessss, love you! and We go for Valentine";
+        document.getElementById("yesButton").classList.remove("enlarged");
+
+        // Change the image source
+        document.getElementById("loveImage").src = "https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif";
+    }
+
+    function enlargeYes() {
+        document.getElementById("yesButton").classList.add("enlarged");
+    }
+</script>
+
+</body>
+</html>
+
